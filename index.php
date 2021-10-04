@@ -15,17 +15,20 @@ font-family: 'Gluten', cursive;
 </style>
     <title>Inicio</title>
         <div id="contenedor">
-            <div id="carrusel" style="margin-top: 20px; margin-left: 10%; margin-right: 10%">
+            <div id="bannerbienvenido" style="margin-left:10%; margin-right:10%;margin-top:20px;">
+                <img src="images/bienvenidos.png" style="width:100%; height: 250px">
+            </div>
+            <div id="carrusel" style="margin-top: 20px; width:80%; margin-left:10%">
                 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-interval="2000">
-                            <img src="images/pandequeso.jpg " class="d-block w-100" width="80%" height="300px">
+                            <img src="images/carrusel1.png " class="d-block w-100" height="300px">
                         </div>
                         <div class="carousel-item" data-interval="2000">
-                            <img src="images/pastel.jpg" class="d-block w-100" width="80%" height="300px">
+                            <img src="images//carrusel2.png" class="d-block w-100"  height="300px">
                         </div>
                         <div class="carousel-item" data-interval="2000">
-                            <img src="images/dulce.jpg" class="d-block w-100" width="80%" height="300px">
+                            <img src="images/carrusel3.png" class="d-block w-100" height="300px">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -37,9 +40,6 @@ font-family: 'Gluten', cursive;
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-            </div>
-            <div id="bannerbienvenido" style="margin-left:10%; margin-right:10%;margin-top:20px;">
-                <img src="images/bienvenido.png" style="width:100%; height: 250px">
             </div>
             <div class="cuerpo" style="margin-top: 20px;margin-left:50px;height: 400px;">
                 <div class="cuerpos" style="margin-left:6%;">

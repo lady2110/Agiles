@@ -15,33 +15,31 @@
     }
     </style>
 </head>
-<body style="background:#FAE5D3">
+<body background="images/fondo1.jpg">
     
         <div id="banner">
-            <img src="images/banner.png" style="width:100%; height: 250px">
+            <img src="images/Pasteleria.png" style="width:100%; height: 250px">
         </div>
         <div class="BarraNavegacion">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-                <a href="index.php" style="margin-left: 400px;">
-                    <img src="images/home.png" width="50px" height="50px"></a>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #F48FB1;">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    <ul class="navbar-nav mr-auto" style="margin-left: 25%;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php"><img src="images/home.svg" width="30px" height="30px"> Home |<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="historia.php">Nuestra empresa</a>
+                            <a class="nav-link" href="historia.php"><img src="images/nosotros.svg" width="30px" height="30px"> Nuestra empresa |</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="carrito.php">Galeria</a>
+                            <a class="nav-link" href="carrito.php"><img src="images/carrito.svg" width="30px" height="30px"> Carrito |</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="seccion.html">Inicie Sección</a>
+                            <a class="nav-link" href="registros.php"><img src="images/empleados.svg" width="30px" height="30px"> Inicie Sección</a>
                         </li>
                     </ul>
                 </div>
