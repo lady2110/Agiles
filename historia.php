@@ -13,7 +13,6 @@ include 'cabecera/cabecera.php';
     }
 
     .titulo {
-        margin-top: 10px;
         font-family: 'Gluten', cursive;
         text-align: center;
         background-color: #EC407A;
