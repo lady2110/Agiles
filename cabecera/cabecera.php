@@ -40,7 +40,7 @@
                         <a class="nav-link" href="carrito.php"><img src="images/carrito.svg" width="30px" height="30px"> Carrito |</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="registros.php"><img src="images/empleados.svg" width="30px" height="30px"> Inicie Sección</a>
+                        <a class="nav-link" href="seccion.php"><img src="images/empleados.svg" width="30px" height="30px"> Inicie Sección</a>
                     </li>
                 </ul>
             </div>

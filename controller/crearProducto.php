@@ -22,5 +22,3 @@ if ($producto->crearPro()) { // return true
 } else { // return false
     echo 'Producto NO se creó ...';
 }
-
-?>
