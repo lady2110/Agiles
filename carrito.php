@@ -24,4 +24,5 @@ include 'cabecera/cabecera.php';
 <div>
     <?php
     include 'cabecera/pie.php';
-    ?></div>
+    ?>
+</div>
