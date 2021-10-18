@@ -32,15 +32,15 @@ include 'cabecera/cabecera.php';
 							<label for="text">Cedula:</label>
 						</div>
 						<div style="height:45px;float:left;width:70%"">
-						<input type=" text" class="form-control" name="cedula" style="width: 90%;" autocomplete="off">
+						<input type=" text" class="form-control" name="cedula" style="width: 90%;" autocomplete="off" required>
 						</div>
 					</div>
 					<div style="height:45px;float:left; width:10%;margin-left:20px">
 						<label for="text">Cargo:</label>
 					</div>
 					<div style="height:45px;float:left;width:70%"">
-										<select style=" width: 90%; height:40px;" class="form-control" name="cargo">
-						<option selected>Selecciona...</option>
+										<select style=" width: 90%; height:40px;" class="form-control" name="cargo" required>
+						<option value="">Selecciona...</option>
 						<option value="administrador">Administrador</option>
 						<option value="empleado">Empleado</option>
 						</select>

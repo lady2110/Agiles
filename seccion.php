@@ -31,11 +31,11 @@ include 'conexion.php';
 				<form action="controller/ingreso.php" method="POST">
 					<div class="mb-3">
 						<label for="exampleInputEmail1" class="form-label">Correo</label>
-						<input type="email" class="form-control" name="correo" aria-describedby="emailHelp" style=" width:80%" autocomplete="off">
+						<input type="email" class="form-control" name="correo" aria-describedby="emailHelp" style=" width:80%" autocomplete="off" required>
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">Cedula</label>
-						<input type="password" class="form-control" name="cedula" style=" width:80%">
+						<input type="password" class="form-control" name="cedula" style=" width:80%" required>
 					</div>
 					<?php
 					//ALERTA PARA INGRESO

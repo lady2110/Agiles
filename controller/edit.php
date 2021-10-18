@@ -58,11 +58,13 @@ if (isset($_POST['update'])) {
 
 			<p>Dirección <input type="text" name="direccion" value="<?php echo $row['direccion']; ?>" class="form-control" autocomplete="off"></p>
 
-			<p>Cargo nuevo <select style=" width: 100%; height:40px;" class="form-control" name="cargo">
-					<option selected><?php echo $row['cargo']; ?></option>
-					<option value="administrador">Administrador</option>
-					<option value="empleado">Empleado</option>
-				</select></p>
+			<p>Cargo</p>
+			<select style=" width: 100%; height:40px;" class="form-control" name="cargo">
+				<option selected><?php echo $row['cargo']; ?></option>
+				<option value="administrador">Administrador</option>
+				<option value="empleado">Empleado</option>
+			</select>
+
 		</div>
 
 		<div style="float:left;width:30%;margin-left:20px">

@@ -99,7 +99,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Nombre:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="nombre" autocomplete="off">
+											<input type=" text" class="form-control" name="nombre" autocomplete="off" required>
 												</div>
 											</div>
 
@@ -108,7 +108,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Cedula:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="cedula" autocomplete="off">
+											<input type=" text" class="form-control" name="cedula" autocomplete="off" required>
 												</div>
 											</div>
 
@@ -117,7 +117,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Teléfono:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"" >
-											<input type=" text" class="form-control" name="telefono" autocomplete="off">
+											<input type=" text" class="form-control" name="telefono" autocomplete="off" required>
 												</div>
 											</div>
 
@@ -126,7 +126,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Dirección:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="direccion" autocomplete="off">
+											<input type=" text" class="form-control" name="direccion" autocomplete="off" required>
 												</div>
 											</div>
 
@@ -135,7 +135,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Fecha Ingreso:</label>
 												</div>
 												<div style="margin-top: 5px;">
-													<input type="date" name="fecha">
+													<input type="date" name="fecha" required>
 												</div>
 											</div>
 
@@ -144,8 +144,8 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Cargo:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<select style=" width: 100%; height:40px;" class="form-control" name="cargo">
-													<option selected>Selecciona...</option>
+											<select style=" width: 100%; height:40px;" class="form-control" name="cargo" required>
+													<option value="">Selecciona...</option>
 													<option value="administrador">Administrador</option>
 													<option value="empleado">Empleado</option>
 													</select>
@@ -157,7 +157,8 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="email">Correo:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="correo" autocomplete="off">
+											<input type=" email" class="form-control" name="correo" aria-describedby="emailHelp" autocomplete="off" required>
+
 												</div>
 											</div>
 
@@ -166,7 +167,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Salario:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="salario" autocomplete="off">
+											<input type=" text" class="form-control" name="salario" autocomplete="off" required>
 												</div>
 											</div>
 											<div class=" modal-footer" style="font-family:'Gluten'">
@@ -193,7 +194,7 @@ while ($row = mysqli_fetch_array($query3)) {
 								<label for="text">Cedula:</label>
 							</div>
 							<div style="height:45px;float:left;width:50%"">
-							<input type=" text" class="form-control" name="cedula" autocomplete="off" style="margin-left: 20px;">
+							<input type=" text" class="form-control" name="cedula" autocomplete="off" style="margin-left: 20px;" required>
 							</div>
 							<div div style="height:45px;float:left; width:10%;">
 								<button type="submit" class="btn btn-primary" name="consult" style="margin-left: 30px;">Consultar</button>
