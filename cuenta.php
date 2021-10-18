@@ -5,7 +5,7 @@
 	h1,
 	h2,
 	h3,
-	h6,
+	h4,
 	select,
 	label,
 	input {
@@ -14,41 +14,72 @@
 </style>
 <?php
 include 'conexion.php';
-include 'cabecera/cabecera.php';
+include 'cabecera/cabecera2.php';
 ?>
+<div style="background-color: #EC407A;">
+	<h1 style="color: white;text-align:center">Bienvenido</h1>
+</div>
 <div style="border-style: double;border-color:red;">
-	<div style="border-style: double;border-color:yellow;height:250px">
-		<div style="border-style: double;border-color:green;height:250px;width:50%;float:left">
+	<div style="height:270px">
+		<div style="height:270px;width:50%;float:left">
 			<div>
-				<h6 style="text-align: center;">Para registrar, consultar, actualizar o eliminar un empleado debes ser Administrador, ingresa tu cedula y selecciona tu cargo</h6>
+				<h4 style="text-align: center;">Para registrar, consultar, actualizar o eliminar un empleado o un producto debes ser Administrador, ingresa tu cedula y selecciona tu cargo</h4>
 			</div>
-			<form action="controller/administrador.php" method="POST">
+			<form action="administrador.php" method="POST">
 				<div style="height:50px;">
 					<div style="height:50px;">
-						<div style="height:45px;float:left; width:30%;">
+						<div style="height:45px;float:left; width:10%;margin-left:20px">
 							<label for="text">Cedula:</label>
 						</div>
 						<div style="height:45px;float:left;width:70%"">
-						<input type=" password" class="form-control" name="cedula">
+						<input type=" text" class="form-control" name="cedula" style="width: 90%;" autocomplete="off">
 						</div>
 					</div>
-					<div style="height:45px;float:left; width:30%;">
+					<div style="height:45px;float:left; width:10%;margin-left:20px">
 						<label for="text">Cargo:</label>
 					</div>
 					<div style="height:45px;float:left;width:70%"">
-										<select style=" width: 100%; height:40px;" class="form-control" name="cargo">
+										<select style=" width: 90%; height:40px;" class="form-control" name="cargo">
 						<option selected>Selecciona...</option>
 						<option value="administrador">Administrador</option>
 						<option value="empleado">Empleado</option>
 						</select>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary" style="font-family:'Gluten', cursive;margin-top:30px" name="consultar">Ingresar</button>
+				<div style="height:50px;margin-top:50px;width:100px;margin-left:20px">
+					<button type="submit" class="btn btn-primary" style="font-family:'Gluten', cursive;" name="consultar">Ingresar</button>
+				</div>
 			</form>
 		</div>
-		<div style="border-style: double;border-color:green;height:250px;width:50%;float:left"></div>
+		<div style="height:270px;width:50%;float:left">
+			<img src="images/b2.png" width="100%" height="100%">
+		</div>
 	</div>
-	<div style="border-style: double;border-color:chartreuse; height:400px"></div>
+	<div style="border-style: double;border-color:chartreuse; height:330px">
+		<div id="carrusel" style=" width:100%;">
+			<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-interval="2000">
+						<img src="images/carrusel4.jpg " class="d-block w-100" height="300px">
+					</div>
+					<div class="carousel-item" data-interval="2000">
+						<img src="images//carrusel2.png" class="d-block w-100" height="300px">
+					</div>
+					<div class="carousel-item" data-interval="2000">
+						<img src="images/carrusel3.png" class="d-block w-100" height="300px">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
 <div>
 	<?php

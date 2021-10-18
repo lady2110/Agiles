@@ -31,10 +31,9 @@ if (isset($_POST['guardar'])) {
 	$sqlquery = "INSERT INTO empleado (cedula,nombre,telefono,direccion,cargo,fecha,salario,correo) VALUES('$cedula', '$nombre', '$telefono', '$direccion', '$cargo', '$fecha', '$salario', '$correo')";
 	$resultado = mysqli_query($db, $sqlquery);
 	if (!$resultado) { ?>
-		<div style="height:600px;background-image:url('../images/pie.png')">
+		<div style="height:690px;background-image:url('../images/pie.png')">
 			<div style="width:500px; margin-left:30%">
 				<div>
-					<h1 class="card-title" style=" text-align: center;">Error!</h1>
 					<p class="card-text" style="font-size: 30px; text-align: center;">ERROR!</p>
 					<p class="card-text" style="font-size: 30px; text-align: center;">La cedula que intenta ingresar ya existe</p>
 				</div>
@@ -43,10 +42,9 @@ if (isset($_POST['guardar'])) {
 			</div>
 		</div>
 	<?php } else { ?>
-		<div style="height:600px;background-image:url('../images/pie.png')">
+		<div style="height:690px;background-image:url('../images/pie.png')">
 			<div style="width:500px; margin-left:30%">
 				<div>
-					<h1 class="card-title" style=" text-align: center;">Error!</h1>
 					<p class="card-text" style="font-size: 30px; text-align: center;">Muy bien!</p>
 					<p class="card-text" style="font-size: 30px; text-align: center;">Registro correcto</p>
 				</div>

@@ -24,7 +24,7 @@
 	}
 </style>
 <?php
-include '../conexion.php';
+include 'conexion.php';
 
 $conexion = new Conexion();
 $db = $conexion->getConexion();
@@ -43,19 +43,22 @@ $nr3 = mysqli_num_rows($query3);
 while ($row = mysqli_fetch_array($query3)) {
 	if ($nr1 == 1 && $row['cargo'] == 'administrador') {
 		while ($row = mysqli_fetch_array($query2)) { ?>
-			<div style="border-style:double;border-color:#EC407A; width:100%; height: 100px; background-image:url('../images/pie.png');">
-				<img src="../images/hola.png" style="width: 100px; height:100px;float:left">
+			<div style="background-color: #EC407A;">
+				<h1 style="color: white;text-align:center">Bienvenido</h1>
+			</div>
+			<div style="border-style:double;border-color:#EC407A; width:100%; height: 100px; background-image:url('images/pie.png');">
+				<img src="images/hola.png" style="width: 100px; height:100px;float:left">
 				<h3 style="margin-top: 50px;">Hola,<?php echo $row['nombre']; ?></h3>
 			</div>
 			<div style="width: 100%; height:300px">
-				<img src="../images/b1.png" style="width: 100%; height:300px">
+				<img src="images/b1.png" style="width: 100%; height:300px">
 			</div>
 		<?php } ?>
 		<div style="border-style: double;">
 			<div style="border-style: double;border-color:green;width:30%;float:left; height:1000px">
-				<div style="border-style: double; width:100%;height:130px">
+				<div style="border-style: double; width:100%;height:170px">
 					<h3 style="text-align: center;">Ingresar,modificar o eliminar un producto nuevo al carrito</h3>
-					<a href="../crudProducto.php" class="btn btn-primary" style="margin-left:35%">Agregar</a>
+					<a href="crudProducto.php" class="btn btn-primary" style="margin-left:35%">Agregar</a>
 				</div>
 			</div>
 			<div style="border-style: double;border-color:red;width:70%; float:left; height:1000px">
@@ -80,13 +83,13 @@ while ($row = mysqli_fetch_array($query3)) {
 
 									<!-- Modal body -->
 									<div class="modal-body">
-										<form action="insertar.php" method="POST">
+										<form action="./controller/insertar.php" method="POST">
 											<div style=height:50px;">
 												<div style="height:45px;float:left; width:30%;">
 													<label for="text">Nombre:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="nombre">
+											<input type=" text" class="form-control" name="nombre" autocomplete="off">
 												</div>
 											</div>
 
@@ -95,7 +98,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Cedula:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="cedula">
+											<input type=" text" class="form-control" name="cedula" autocomplete="off">
 												</div>
 											</div>
 
@@ -103,8 +106,8 @@ while ($row = mysqli_fetch_array($query3)) {
 												<div style="height:45px;float:left; width:30%;">
 													<label for="text">Teléfono:</label>
 												</div>
-												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="telefono">
+												<div style="height:45px;float:left;width:70%"" >
+											<input type=" text" class="form-control" name="telefono" autocomplete="off">
 												</div>
 											</div>
 
@@ -113,7 +116,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Dirección:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="direccion">
+											<input type=" text" class="form-control" name="direccion" autocomplete="off">
 												</div>
 											</div>
 
@@ -144,7 +147,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="email">Correo:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="correo">
+											<input type=" text" class="form-control" name="correo" autocomplete="off">
 												</div>
 											</div>
 
@@ -153,7 +156,7 @@ while ($row = mysqli_fetch_array($query3)) {
 													<label for="text">Salario:</label>
 												</div>
 												<div style="height:45px;float:left;width:70%"">
-											<input type=" text" class="form-control" name="salario">
+											<input type=" text" class="form-control" name="salario" autocomplete="off">
 												</div>
 											</div>
 											<div class=" modal-footer" style="font-family:'Gluten'">
@@ -165,45 +168,23 @@ while ($row = mysqli_fetch_array($query3)) {
 								</div>
 							</div>
 						</div>
-						<a href="../cuenta.php" class="btn btn-primary">Regresar</a>
 					</div>
 					<div style="border-style: double;border-color:green;height:150px;">
 						<div>
-							<h2>CONSULTAR,ELIMINAR</h2>
+							<h2>CONSULTAR,ACTUALIZAR Y ELIMINAR </h2>
 						</div>
-						<form action="consultar.php" method="POST">
+						<form action="./controller/consultar.php" method="POST">
 							<div style="height:50px;">
 								<div style="height:50px;">
 									<div style="height:45px;float:left; width:10%;">
 										<label for="text">Cedula:</label>
 									</div>
 									<div style="height:45px;float:left;width:50%"">
-							<input type=" password" class="form-control" name="cedula">
+							<input type=" text" class="form-control" name="cedula" autocomplete="off">
 									</div>
 								</div>
 							</div>
 							<button type="submit" class="btn btn-primary" name="consult">Consultar</button>
-							<button type="submit" class="btn btn-primary" name="delete">Eliminar</button>
-							<a href="../cuenta.php" class="btn btn-primary">Regresar</a>
-						</form>
-					</div>
-					<div style="border-style: double;border-color:turquoise;height:150px;">
-						<div>
-							<h2>ACTUALIZAR</h2>
-						</div>
-						<form action="controller/administrador.php" method="POST">
-							<div style="height:50px;">
-								<div style="height:50px;">
-									<div style="height:45px;float:left; width:10%;">
-										<label for="text">Cedula:</label>
-									</div>
-									<div style="height:45px;float:left;width:50%"">
-							<input type=" password" class="form-control" name="cedula">
-									</div>
-								</div>
-							</div>
-							<a href="#" class="btn btn-primary">Actualizar</a>
-							<a href="../cuenta.php" class="btn btn-primary">Regresar</a>
 						</form>
 					</div>
 				</div>
@@ -211,26 +192,26 @@ while ($row = mysqli_fetch_array($query3)) {
 		</div>
 	<?php
 	} else if ($nr1 == 1 && $row['cargo'] == 'empleado') { ?>
-		<div style="height:600px;background-image:url('../images/pie.png')">
+		<div style="height:600px;background-image:url('images/pie.png')">
 			<div style="width:500px; margin-left:30%">
 				<div>
 					<h1 class="card-title" style=" text-align: center;">Error!</h1>
 					<p class="card-text" style="font-size: 30px; text-align: center;">No tienes permisos</p>
 				</div>
-				<img src="../images/alerta.png" class="card-img-bottom" alt="Card image" style="width:50%">
-				<a href="../cuenta.php" class="btn btn-primary">Regresar</a>
+				<img src="images/alerta.png" class="card-img-bottom" alt="Card image" style="width:50%">
+				<a href="cuenta.php" class="btn btn-primary">Regresar</a>
 			</div>
 		</div>
 	<?php } else if ($nr1 == 0) { ?>
-		<div style="height:600px;background-image:url('../images/pie.png')">
+		<div style="height:600px;background-image:url('images/pie.png')">
 			<div style="width:500px; margin-left:30%">
 				<div>
 					<h1 class="card-title" style=" text-align: center;">Error!</h1>
 					<p class="card-text" style="font-size: 30px; text-align: center;">ERROR DE DATOS</p>
 					<p class="card-text" style="font-size: 30px; text-align: center;">Cedula o cargo incorrectos</p>
 				</div>
-				<img src="../images/detener.png" class="card-img-bottom" alt="Card image" style="width:50%">
-				<a href="../cuenta.php" class="btn btn-primary">Regresar</a>
+				<img src="images/detener.png" class="card-img-bottom" alt="Card image" style="width:50%">
+				<a href="cuenta.php" class="btn btn-primary">Regresar</a>
 			</div>
 		</div>
 <?php	}

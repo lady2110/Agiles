@@ -2,7 +2,8 @@
 require 'controller/crudp.php';
 ?>
 <style>
-	.container {
+	.container,
+	h1 {
 		font-family: 'Gluten', cursive;
 	}
 
@@ -18,8 +19,9 @@ require 'controller/crudp.php';
 	}
 </style>
 <?php
-include 'cabecera/cabecera.php';
+include 'cabecera/cabecera2.php';
 ?>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
@@ -27,6 +29,9 @@ include 'cabecera/cabecera.php';
 </head>
 
 <body>
+	<div style="background-color: #EC407A;">
+		<h1 style="color: white;text-align:center">Nuestros Productos</h1>
+	</div>
 	<div class="container">
 		<form action="" method="post" enctype="multipart/form-data">
 
@@ -44,7 +49,7 @@ include 'cabecera/cabecera.php';
 								<input type="hidden" required name="idProducto" value="<?php echo $idProducto; ?>" placeholder="" id="idProducto" require="">
 
 								<label for="">Nombre Producto:</label>
-								<input type="text" class="form-control <?php echo (isset($error['nombreProducto'])) ? "is-invalid" : ""; ?>" name="nombreProducto" value="<?php echo $nombreProducto; ?>" placeholder="" id="nombreProducto" require="">
+								<input type="text" class="form-control <?php echo (isset($error['nombreProducto'])) ? "is-invalid" : ""; ?>" name="nombreProducto" value="<?php echo $nombreProducto; ?>" placeholder="" id="nombreProducto" require="" autocomplete="off">
 								<div class="invalid-feedback">
 									<?php echo (isset($error['nombreProducto'])) ? $error['nombreProducto'] : ""; ?>
 								</div>
@@ -58,7 +63,7 @@ include 'cabecera/cabecera.php';
 								<br>
 
 								<label for="">Tipo Producto:</label>
-								<input type="text" class="form-control <?php echo (isset($error['tipoProducto'])) ? "is-invalid" : ""; ?>" name="tipoProducto" value="<?php echo $tipoProducto; ?>" placeholder="" id="tipoProducto" require="">
+								<input type="text" class="form-control <?php echo (isset($error['tipoProducto'])) ? "is-invalid" : ""; ?>" name="tipoProducto" value="<?php echo $tipoProducto; ?>" placeholder="" id="tipoProducto" require="" autocomplete="off">
 								<div class="invalid-feedback">
 									<?php echo (isset($error['tipoProducto'])) ? $error['tipoProducto'] : ""; ?>
 								</div>
@@ -91,8 +96,11 @@ include 'cabecera/cabecera.php';
 			<button type="button" id="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
 				Agregar Producto +
 			</button>
-			<h3>Si deseas Modifcar un producto, le das clic en Seleccionar luedo en Agregar Producto</h3>
+
+			<h4>Si deseas Modifcar un producto, le das clic en Seleccionar luego en Agregar Producto</h4>
+			<a href="cuenta.php" class="btn btn-primary">Regresar</a>
 		</form>
+
 		<div class="row">
 			<table class="table table-hover table-bordered">
 				<thead class="table-warning">
@@ -114,7 +122,7 @@ include 'cabecera/cabecera.php';
 							<form action="" method="post">
 								<input type="hidden" name="idProducto" value="<?php echo $productos['idProducto']; ?>">
 								<a href="btnEliminar" onclick="return Confirmar('¿Estas seguro de Eliminar el Producto?');" type="submit" name="accion">
-									<img src="borrar.png" width="30" height="30">
+									<img src="images/bote-de-basura.png" width="30" height="30">
 								</a>
 								<button value="btnEliminar" onclick="return Confirmar('¿Estas seguro de Eliminar el Producto?');" type="submit" class="btn btn-info" name="accion">Eliminar</button>
 								<input type="submit" value="Seleccionar" class="btn btn-danger" name="accion">
@@ -136,6 +144,7 @@ include 'cabecera/cabecera.php';
 
 			}
 		</script>
+		<a href="cuenta.php" class="btn btn-primary" style="margin-top: 20px;">Regresar</a>
 	</div>
 </body>
 
