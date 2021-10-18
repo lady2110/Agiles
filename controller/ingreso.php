@@ -8,8 +8,6 @@ $db = $conexion->getConexion();
 $cedula = $_POST['cedula'];
 $correo = $_POST['correo'];
 
-
-
 $query1 = mysqli_query($db, "SELECT * FROM empleado WHERE cedula = '$cedula' and correo = '$correo' ");
 $nr1 = mysqli_num_rows($query1);
 

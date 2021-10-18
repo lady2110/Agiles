@@ -49,7 +49,6 @@ include 'conexion.php';
 					<?php session_unset();
 					} ?>
 					<button type="submit" class="btn btn-primary" style="font-family:'Gluten', cursive;" name="entrar">Entrar</button>
-
 				</form>
 			</div>
 

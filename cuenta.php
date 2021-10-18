@@ -14,7 +14,7 @@
 </style>
 <?php
 include 'conexion.php';
-include 'cabecera/cabecera2.php';
+include 'cabecera/cabecera.php';
 ?>
 <div style="background-color: #EC407A;">
 	<h1 style="color: white;text-align:center">Bienvenido</h1>
@@ -47,7 +47,7 @@ include 'cabecera/cabecera2.php';
 					</div>
 				</div>
 				<div style="height:50px;margin-top:50px;width:100px;margin-left:20px">
-					<button type="submit" class="btn btn-primary" style="font-family:'Gluten', cursive;" name="consultar">Ingresar</button>
+					<button type="submit" class="btn btn-primary" style="font-family:'Gluten', cursive;">Ingresar</button>
 				</div>
 			</form>
 		</div>
@@ -55,7 +55,7 @@ include 'cabecera/cabecera2.php';
 			<img src="images/b2.png" width="100%" height="100%">
 		</div>
 	</div>
-	<div style="border-style: double;border-color:chartreuse; height:330px">
+	<div style="border-style: double;border-color:chartreuse; height:305px">
 		<div id="carrusel" style=" width:100%;">
 			<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
@@ -79,6 +79,9 @@ include 'cabecera/cabecera2.php';
 				</a>
 			</div>
 		</div>
+	</div>
+	<div style="border-style: double;border-color:blueviolet; height:330px">
+
 	</div>
 </div>
 <div>

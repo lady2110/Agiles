@@ -15,6 +15,7 @@
 	button,
 	p {
 		font-family: 'Gluten', cursive;
+		text-align: center;
 
 	}
 
@@ -43,32 +44,41 @@ $nr3 = mysqli_num_rows($query3);
 while ($row = mysqli_fetch_array($query3)) {
 	if ($nr1 == 1 && $row['cargo'] == 'administrador') {
 		while ($row = mysqli_fetch_array($query2)) { ?>
-			<div style="background-color: #EC407A;">
-				<h1 style="color: white;text-align:center">Bienvenido</h1>
-			</div>
-			<div style="border-style:double;border-color:#EC407A; width:100%; height: 100px; background-image:url('images/pie.png');">
-				<img src="images/hola.png" style="width: 100px; height:100px;float:left">
-				<h3 style="margin-top: 50px;">Hola,<?php echo $row['nombre']; ?></h3>
+			<div style="background-color: #EC407A; height:80px;">
+				<img src="images/hola.png" style="width: 80px; height:80px;float:left">
+				<a href="cuenta.php" class="btn btn-light">Regresar</a>
+				<h1 style="color: white;text-align:center">Bienvenido,<?php echo $row['nombre']; ?></h1>
+
 			</div>
 			<div style="width: 100%; height:300px">
 				<img src="images/b1.png" style="width: 100%; height:300px">
 			</div>
 		<?php } ?>
-		<div style="border-style: double;">
-			<div style="border-style: double;border-color:green;width:30%;float:left; height:1000px">
-				<div style="border-style: double; width:100%;height:170px">
-					<h3 style="text-align: center;">Ingresar,modificar o eliminar un producto nuevo al carrito</h3>
-					<a href="crudProducto.php" class="btn btn-primary" style="margin-left:35%">Agregar</a>
-				</div>
+		<div style="background-color: #FCE4EC;">
+			<div style="height:50px;background-color: #EC407A;">
+				<h3 style="text-align: center;color:white">¿Qué deseas hacer?</h3>
 			</div>
-			<div style="border-style: double;border-color:red;width:70%; float:left; height:1000px">
-				<h4 style="text-align: center;">¿Qué deseas hacer?</h4>
-				<div style="border-style: double;border-color:orangered;height:800px">
-					<div style="border-style: double;border-color:blue;height:100px">
-						<div>
-							<h2>REGISTRAR</h2>
-						</div>
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+			<div style="height:305px">
+				<div style="height:300px;float:left;width:32.5%;margin-left:1.5%">
+					<div style="height:40px">
+						<h3>Productos</h3>
+					</div>
+					<div style="height:207;">
+						<img src="images/producto.png" style="width: 40%;margin-left:30%">
+					</div>
+					<div style="height:50px">
+						<a href="crudProducto.php" class="btn btn-primary" style="margin-left:35%">Agregar</a>
+					</div>
+				</div>
+				<div style="height:300px;float:left;width:32.5%;">
+					<div style="height:40px">
+						<h3>Registrar Empleado</h3>
+					</div>
+					<div style="height:207;">
+						<img src="images/cocinera.png" style="width: 40%;margin-left:25%">
+					</div>
+					<div style="height:50px">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:35%">
 							Registrar
 						</button>
 						<div class="modal" id="myModal">
@@ -169,22 +179,25 @@ while ($row = mysqli_fetch_array($query3)) {
 							</div>
 						</div>
 					</div>
-					<div style="border-style: double;border-color:green;height:150px;">
-						<div>
-							<h2>CONSULTAR,ACTUALIZAR Y ELIMINAR </h2>
-						</div>
+				</div>
+				<div style="height:300px;float:left;width:32.5%;">
+					<div style="height:40px">
+						<h3>Consultar Empleado</h3>
+					</div>
+					<div style="height:207px;">
+						<img src="images/cocinero.png" style="width: 40%;margin-left:30%">
+					</div>
+					<div style="height:50px">
 						<form action="./controller/consultar.php" method="POST">
-							<div style="height:50px;">
-								<div style="height:50px;">
-									<div style="height:45px;float:left; width:10%;">
-										<label for="text">Cedula:</label>
-									</div>
-									<div style="height:45px;float:left;width:50%"">
-							<input type=" text" class="form-control" name="cedula" autocomplete="off">
-									</div>
-								</div>
+							<div style="height:45px;float:left; width:10%;">
+								<label for="text">Cedula:</label>
 							</div>
-							<button type="submit" class="btn btn-primary" name="consult">Consultar</button>
+							<div style="height:45px;float:left;width:50%"">
+							<input type=" text" class="form-control" name="cedula" autocomplete="off" style="margin-left: 20px;">
+							</div>
+							<div div style="height:45px;float:left; width:10%;">
+								<button type="submit" class="btn btn-primary" name="consult" style="margin-left: 30px;">Consultar</button>
+							</div>
 						</form>
 					</div>
 				</div>

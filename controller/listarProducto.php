@@ -23,7 +23,7 @@
         ?>
 
             <div class="col-lg-4  col-md-6  col-sm-12">
-                <div class="card" style="margin-top: 10px;">
+                <div class="card" style="margin-top:10px;">
                     <img src="./images/<?php echo $row[4]; ?>" class="card-img-top" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row[1]; ?></h5>
