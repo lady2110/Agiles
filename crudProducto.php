@@ -10,7 +10,7 @@ require 'controller/crudp.php';
 	#button {
 		font-size: 18px;
 		margin-top: 15px;
-		color: #FF5733;
+		color: #EC407A;
 	}
 
 	.modal-title {
@@ -125,7 +125,7 @@ include 'cabecera/cabecera2.php';
 									<img src="images/bote-de-basura.png" width="30" height="30">
 								</a>
 								<button value="btnEliminar" onclick="return Confirmar('¿Estas seguro de Eliminar el Producto?');" type="submit" class="btn btn-info" name="accion">Eliminar</button>
-								<input type="submit" value="Seleccionar" class="btn btn-danger" name="accion">
+								<input type="submit" value="Seleccionar" class="btn" style="background-color: #EC407A;" name="accion">
 							</form>
 						</td>
 					</tr>
