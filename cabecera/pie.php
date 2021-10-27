@@ -26,9 +26,9 @@
     <div class="informacion">
         <div class="redes">
             <h2>Redes Sociales</h2>
-            <img src="images/facebook.png" style="width: 50px; height:50px">
+            <a href="https://web.facebook.com/Pasteleria-MyE-106969965106778"><img src="images/facebook.png" style="width: 50px; height:50px"></a>
             <h2>FACEBOOK</h2>
-            <img src="images/instagram.png" style="width: 50px; height:50px">
+            <a href="https://www.instagram.com/mye_past/"> <img src="images/instagram.png" style="width: 50px; height:50px"></a>
             <h2>INSTRAGRAM</h2>
         </div>
         <div class="contacto">

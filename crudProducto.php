@@ -1,6 +1,11 @@
 <?php
 require 'controller/crudp.php';
 ?>
+<script>
+	if (window.history.replaceState) {
+		window.history.replaceState(null, null, window.location.href);
+	}
+</script>
 <style>
 	.container,
 	h1 {
@@ -98,7 +103,7 @@ include 'cabecera/cabecera2.php';
 			</button>
 
 			<h4>Si deseas Modifcar un producto, le das clic en Seleccionar luego en Agregar Producto</h4>
-			<a href="cuenta.php" class="btn btn-primary">Regresar</a>
+			<a href="cargoa.php" class="btn btn-primary">Regresar</a>
 		</form>
 
 		<div class="row">
@@ -144,7 +149,7 @@ include 'cabecera/cabecera2.php';
 
 			}
 		</script>
-		<a href="cuenta.php" class="btn btn-primary" style="margin-top: 20px;">Regresar</a>
+		<a href="cargoa.php" class="btn btn-primary" style="margin-top: 20px;">Regresar</a>
 	</div>
 </body>
 

@@ -112,20 +112,24 @@ if (isset($_POST['consult'])) {
 					</div>
 					<a href="edit.php?cedula=<?php echo $row['cedula'] ?>"><img src="../images/editar.png" title="Editar" style="width: 50px;height:50px;margin-left:45%"></a>
 					<a href="delete.php?cedula=<?php echo $row['cedula'] ?> "><img src="../images/basura.png" title="Eliminar" style="width: 50px;height:50px;"></a>
-					<a href="../cuenta.php" class="btn btn-primary"><img src="../images/flecha-izquierda.png" title="Regresar" style="width: 50px;height:50px;"></a>
+					<a href="../cargoa.php" class="btn btn-primary"><img src="../images/flecha-izquierda.png" title="Regresar" style="width: 50px;height:50px;"></a>
 				</div>
 
 			</div>
 		<?php }
 	} else { ?>
-		<div style="height:690px;background-image:url('../images/pie.png')">
-			<div style="width:500px; margin-left:30%">
+		<div style="height:750px;background-image:url('../images/pie.png');">
+			<div style="width:500px; margin-left:30%;">
 				<div>
 					<p class="card-text" style="font-size: 30px; text-align: center;">ERROR!</p>
 					<p class="card-text" style="font-size: 30px; text-align: center;">La cedula que intenta consultar no existe</p>
 				</div>
-				<img src="../images/choque.png" class="card-img-bottom" alt="Card image" style="width:50%">
-				<a href="../cuenta.php" class="btn btn-primary">Regresar</a>
+				<div>
+					<img src="../images/choque.png" class="card-img-bottom" alt="Card image" style="width:50%;margin-left:25%">
+				</div>
+				<div>
+					<a href="../cuenta.php" class="btn btn-primary" style="margin-left: 41%;margin-top:2%">Regresar</a>
+				</div>
 			</div>
 		</div>
 <?php }

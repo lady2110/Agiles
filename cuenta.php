@@ -25,7 +25,7 @@ include 'cabecera/cabecera.php';
 			<div>
 				<h4 style="text-align: center;">Para registrar, consultar, actualizar o eliminar un empleado o un producto debes ser Administrador, ingresa tu cedula y selecciona tu cargo</h4>
 			</div>
-			<form action="administrador.php" method="POST">
+			<form action="./controller/administrador.php" method="POST">
 				<div style="height:50px;">
 					<div style="height:50px;">
 						<div style="height:45px;float:left; width:10%;margin-left:20px">
@@ -47,7 +47,7 @@ include 'cabecera/cabecera.php';
 					</div>
 				</div>
 				<div style="height:50px;margin-top:50px;width:100px;margin-left:20px">
-					<button type="submit" class="btn btn-primary" style="font-family:'Gluten', cursive;">Ingresar</button>
+					<button type="submit" class="btn btn-primary" style="font-family:'Gluten', cursive;" name="rol">Ingresar</button>
 				</div>
 			</form>
 		</div>
