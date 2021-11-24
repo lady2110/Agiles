@@ -11,7 +11,7 @@
 include 'cabecera/cabecera.php';
 ?>
 <div class="titulo">
-    <h1 style="color: white ;">Carrito</h1>
+    <h1 style="color: white ;">Productos</h1>
 </div>
 <div class="container">
     <title>Carrito</title>

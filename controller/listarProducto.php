@@ -30,7 +30,7 @@
                         <p class="card-text">
                             Precio $: <?php echo $row[2]; ?>
                         </p>
-                        <a href="#" class="btn btn-primary">Comprar ahora!!!</a>
+                        <a href="./products.php" class="btn btn-primary">Comprar ahora!!!</a>
                     </div>
                 </div>
             </div>
