@@ -17,4 +17,3 @@ if(!empty($_POST))
 	}
 }
 	print "<script>alert('Venta procesada exitosamente');window.location='../products.php';</script>";
-?>

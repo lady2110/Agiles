@@ -52,6 +52,3 @@ if(!empty($_POST))
 			//fin validación de la cantidad
 	}
 }
-
-?>
-
